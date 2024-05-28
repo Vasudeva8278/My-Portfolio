@@ -1,11 +1,9 @@
 
-
 import { useGLTF, useTexture, useVideoTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { animate, useMotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import React, { useEffect } from "react";
-
 import * as THREE from "three";
 
 export function Office(props) {
