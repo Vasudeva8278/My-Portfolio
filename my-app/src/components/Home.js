@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export const Home = () => {
   return (
     <HelmetProvider>
-      <section id="home" className="home text-white" style={{ backgroundColor: "#201414" }}> {/* Set background color */}
+      <section id="home" className="home text-white" style={{ backgroundColor: "#201414",marginTop:"60px" }}> {/* Set background color */}
         <Helmet>
           <meta charSet="utf-8" />
           <title>{meta.title}</title>
@@ -19,7 +19,7 @@ export const Home = () => {
         <div
   className="h_bg-image order-1 order-lg-2 h-100 "
  
-  style={{ backgroundImage: `url("${introdata.your_img_url}")` }}
+
    ></div>
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center ">

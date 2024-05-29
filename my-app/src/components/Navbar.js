@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark text-white" style={{ backgroundColor: '#181414' }}>
-      <Link className="navbar-brand" to="/">Vasu Dev</Link> {/* Your name or logo */}
+      <Link className="navbar-brand" to="/" style={{marginTop:"-5px"}}>Vasu Dev</Link> {/* Your name or logo */}
       <button
         className="navbar-toggler"
         type="button"
@@ -26,7 +26,7 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/skills">
+            <NavLink className="nav-link" to="/Skills">
               Skills
             </NavLink>
           </li>
@@ -35,7 +35,7 @@ export const Navbar = () => {
               Projects
             </NavLink>
           </li>
-          <li className="nav-link">
+          <li className="nav-link" style={{marginTop:"-5px"}}>
             <NavLink className="nav-link" to="/contact">
               Contact
             </NavLink>

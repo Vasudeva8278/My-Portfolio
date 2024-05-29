@@ -1,5 +1,11 @@
+.nav {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for all links */
+  justify-items: center; /* Center links horizontally */
+  align-items: center; /* Center links vertically (optional) */
+}
+
 .nav-link {
-    display: inline-block; /* Make links display horizontally */
-    margin-right: 10px; /* Add spacing between links (optional) */
-  }
-  
+  display: inline-block;
+  margin: 0 40px; /* Optional spacing around links */
+}

@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import { Home } from './components/Home';
-//import { Skills } from './components/Skills';
+import { Skills } from './components/Skills';
+
 import { ContactUs } from './components/ContactUs';
 //import Projects from './components/Projects';
 //import Contact from './components/Contact';
 import './App.css';
-import { Container } from 'react-bootstrap';
-
 
 const App = () => {
   
@@ -19,9 +18,11 @@ const App = () => {
   
     <Router>
       <Navbar />
+      <br></br>
       <Routes>
       <Route path="/" element={<Home />} />
-     
+      <Route path='/Skills' element={<Skills />} />
+      
         <Route path="/contact" element={<ContactUs />} />
       
         {/*

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../css/Contact.css";
 import emailjs from "emailjs-com";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
@@ -87,7 +88,7 @@ export const ContactUs = () => {
                   <label>
                     Name:
                     <input
-                      className="form-control rounded-0"
+                      className="form-control rounded-0 text-white"
                       id="email"
                       type="text"
                       name="subject"
@@ -95,6 +96,7 @@ export const ContactUs = () => {
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
                       required
+
                     />
                   </label>
                 </Col>

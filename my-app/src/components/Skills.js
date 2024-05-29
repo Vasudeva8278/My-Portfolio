@@ -1,5 +1,6 @@
-import React from "react";
-//import "./style.css";
+// src/components/Skills.js
+import React from 'react';
+import "../css/Skills.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import {
@@ -10,10 +11,11 @@ import {
   services,
 } from "./content_option";
 
-export const About = () => {
+
+export const Skills = () => {
   return (
     <HelmetProvider>
-      <Container className="About-header">
+      <Container className="About-header text-white">
         <Helmet>
           <meta charSet="utf-8" />
           <title> About | {meta.title}</title>

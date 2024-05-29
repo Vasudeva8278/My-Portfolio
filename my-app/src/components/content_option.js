@@ -12,7 +12,7 @@ const introdata = {
         third: "I am Python Fullstack Devloper",
     },
     description: " 'Highly motivated and enthusiastic Full Stack Developer with experience in designing, developing and maintaining web applications using technologies such as JavaScript, React, Python,Mysql,Django.",
-    your_img_url: "./Assets/three.jpg",
+    your_img_url: "../Assets/three.jpg",
 };
 
 const dataabout = {
