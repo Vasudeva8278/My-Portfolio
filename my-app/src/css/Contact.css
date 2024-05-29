@@ -5,16 +5,36 @@
     background-color: var(--bg-color);
     border-radius: 0 !important;
     border: 1px solid var(--secondary-color);
+    width: 20rem;
+    border: 2px solid #ccc; /* Adjust color as desired */
 }
 
 .contact__form input.form-control {
     margin-bottom: 2em;
     height: calc(2.5em + .75rem + 2px);
+    border: 2px solid #ccc; /* Adjust color as desired */
 }
 
 button.btn.ac_btn:hover {
     color: var(--secondary-color);
+    animation: buttonHover 0.5s ease-in-out;
+    border-radius: 2px;
+    border: 5px solid #ccc; /* Adjust color as desired */
+   
+  }
+
+.btn.ac_btn{
+    margin-top: 2rem;
+    width: 6rem;
+    border: 1px solid #ccc; /* Adjust color as desired */
+
 }
+  
+  @keyframes buttonHover {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
+  
 
 .loading-bar {
     position: fixed;
@@ -27,6 +47,7 @@ button.btn.ac_btn:hover {
     transform: translateX(100%);
     animation: shift-rightwards 1s ease-in-out infinite;
     animation-delay: .3s;
+    
 }
 
 @keyframes shift-rightwards {
@@ -64,3 +85,4 @@ button.btn.ac_btn:hover {
   .contact__form {
     min-height: 500px; /* Adjust the minimum height as needed */
   }
+  
