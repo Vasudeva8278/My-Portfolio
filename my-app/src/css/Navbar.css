@@ -1,0 +1,5 @@
+.nav-link {
+    display: inline-block; /* Make links display horizontally */
+    margin-right: 10px; /* Add spacing between links (optional) */
+  }
+  

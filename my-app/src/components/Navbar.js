@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-//import './Navbar.css'; // Import your CSS file for styling
+import '../css/Navbar.css'; // Import your CSS file for styling
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#181414' }}>
+    <nav className="navbar navbar-expand-lg navbar-dark text-white" style={{ backgroundColor: '#181414' }}>
       <Link className="navbar-brand" to="/">Vasu Dev</Link> {/* Your name or logo */}
       <button
         className="navbar-toggler"
