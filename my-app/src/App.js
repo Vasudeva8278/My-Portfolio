@@ -4,7 +4,7 @@ import { Home } from './components/Home';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { ContactUs } from './components/ContactUs';
-
+import { Resume } from './components/Resume';
 import './App.css';
 
 const App = () => {
@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <>
-    <div style={{ backgroundColor: "#201414" }}>
+    <div style={{ backgroundColor: "#201414",height:"auto" }}>
   
     <Router>
       <Navbar />
@@ -25,7 +25,7 @@ const App = () => {
         <Route path="/contact" element={<ContactUs />} />
         
         <Route path="/projects" element={<Projects />} />
-      
+        <Route path="/Resume" element={<Resume />} />
         {/*
        
         <Route path="/contact" element={<Contact />} />

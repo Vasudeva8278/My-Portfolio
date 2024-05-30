@@ -15,7 +15,7 @@ import {
 export const Skills = () => {
   return (
     <HelmetProvider>
-      <Container className="About-header text-white">
+      <Container className="About-header text-white" style={{height:"200rem"}}>
         <Helmet>
           <meta charSet="utf-8" />
           <title> About | {meta.title}</title>
@@ -47,9 +47,9 @@ export const Skills = () => {
                 {worktimeline.map((data, i) => {
                   return (
                     <tr key={i}>
-                      <th scope="row">{data.jobtitle}</th>
-                      <td>{data.where}</td>
-                      <td>{data.date}</td>
+                      <th scope="row" className='text-white' style={{ backgroundColor:"#201414"}}>{data.jobtitle}</th>
+                      <td className='text-white' style={{ backgroundColor:"#201414"}}>{data.where}</td>
+                      <td className='text-white' style={{ backgroundColor:"#201414"}}>{data.date}</td>
                     </tr>
                   );
                 })}

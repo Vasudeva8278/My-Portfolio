@@ -113,10 +113,10 @@ section {
 .ac_btn a {
     text-decoration: none;
 }
-
 .ac_btn:hover {
     box-shadow: 8px 8px 0px var(--text-color), -8px -8px 0px var(--text-color);
 }
+
 
 .ac_btn:hover .one {
     opacity: 1;
@@ -238,4 +238,5 @@ section {
     background-image: url("../Assets/three.jpg");
   }
 
-  
+
+

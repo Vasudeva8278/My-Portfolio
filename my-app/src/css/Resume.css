@@ -1,0 +1,12 @@
+.About-header { /* Target the class used in your component */
+    height: 150rem; /* Default height */
+  
+    @media (max-width: 768px) { /* Media query for smaller screens */
+      height: calc(100rem - 153rem); /* Adjust height based on your needs */
+    }
+  
+    @media (max-width: 480px) { /* Additional media query for even smaller screens */
+      height: calc(180rem); /* Adjust height for smaller devices */
+    }
+  }
+  

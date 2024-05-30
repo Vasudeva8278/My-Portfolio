@@ -78,3 +78,20 @@
 .po_item .content a:hover {
     text-decoration: none;
 }
+
+
+  .po_items_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid layout as needed */
+    gap: 1rem;
+  }
+  
+  .po_item {
+    background-color: #fff;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 1rem;
+  }
+  
+
+  

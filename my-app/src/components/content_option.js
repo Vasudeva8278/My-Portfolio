@@ -20,20 +20,18 @@ const dataabout = {
     aboutme: " 'Highly motivated and enthusiastic Full Stack Developer with experience in designing, developing and maintaining web applications using technologies such as JavaScript, React, Python, Django,Mysql. ",
 };
 const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
+        jobtitle: "VCUBE SOFTWARE SOLUTIONS",
+        where: "HYDREABAD",
+        date: "2022",
     },
+
+
     {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
+        jobtitle: "LOMMA IT SOLTIONS",
+        where: "TIRUPATHI",
+        date: "2023",
     },
-    {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
-    },
+   
 ];
 
 const skills = [{
@@ -49,13 +47,34 @@ const skills = [{
         value: 90,
     },
     {
-        name: "React",
+        name: "React.JS",
         value: 90,
     },
     {
-        name: "Mysql",
+        name: "MySQL",
         value: 90,
     },
+    {
+        name: "HTML",
+        value: 90,
+    },
+    {
+        name: "CSS",
+        value: 90,
+    },
+    {
+        name: "BOOTSTRAP",
+        value: 90,
+    },
+    {
+        name: "NODE.JS",
+        value: 90,
+    },
+    {
+        name: "EXPRESS.JS",
+        value: 90,
+    },
+    
 ];
 
 const services = [

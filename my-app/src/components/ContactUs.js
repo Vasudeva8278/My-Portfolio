@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { contactConfig } from "./content_option";
-import { meta, introdata } from './content_option';
+import { meta } from './content_option';
 import { Alert } from "react-bootstrap";
 
 export const ContactUs = () => {
@@ -38,7 +38,7 @@ export const ContactUs = () => {
   return (
     <HelmetProvider>
    
-      <Container className ='text-white' style={{ backgroundColor: "#201414" }}>
+      <Container className ="About-header text-white" style={{ backgroundColor: "#201414",height:"65rem"}}>
         <Helmet>
           <meta charSet="utf-8" />
           <title>{meta.title} | Contact</title>
