@@ -101,15 +101,12 @@
 }
 
 
-.About-header { /* Target the class used in your component */
-    height: 150rem; /* Default height */
-  
-    @media (max-width: 768px) { /* Media query for smaller screens */
-      height: calc(100rem - 153rem); /* Adjust height based on your needs */
-    }
-  
-    @media (max-width: 480px) { /* Additional media query for even smaller screens */
-      height: calc(180rem); /* Adjust height for smaller devices */
-    }
+.about-header {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set a minimum height for the container */
   }
   
+  .content-section {
+    flex-grow: 1; /* Allow child elements to grow and fill space */
+  }

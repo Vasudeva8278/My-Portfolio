@@ -7,7 +7,7 @@ import "../css/Projects.css";
 export const Projects = () => {
   return (
     <HelmetProvider>
-      <Container className="About-header text-white"  style={{ height: "150rem" }}>
+    <Container className="About-header text-white">
         <Helmet>
           <meta charSet="utf-8" />
           <title> Portfolio | {meta.title} </title>

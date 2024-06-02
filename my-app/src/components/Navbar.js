@@ -38,11 +38,7 @@ export const Navbar = () => {
             </NavLink>
           
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/Resume">
-           Resume
-            </NavLink>
-          </li>
+      
           <li className="nav-link" style={{marginTop:"-5px"}}>
             <NavLink className="nav-link" to="/contact">
               Contact

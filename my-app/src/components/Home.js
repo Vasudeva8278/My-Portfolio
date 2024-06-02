@@ -41,14 +41,7 @@ export const Home = () => {
                 </h1>
                 <p className="mb-1x">{introdata.description}</p>
                 <div className="intro_btn-action pb-5">
-                  <Link to="Resume" className="text_2 text-white">
-                    
-                    <div id="button_p" className="ac_btn btn text-white" style={{border:"2px solid white",width:"10rem"}}>
-                    Resume
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
+                 
                   <Link to="/contact">
                     <div id="button_h" className="ac_btn btn text-white" style={{border:"2px solid white",width:"10rem",marginLeft:"4rem"}}>
                       Contact Me

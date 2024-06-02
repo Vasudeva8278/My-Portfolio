@@ -15,7 +15,7 @@ import {
 export const Skills = () => {
   return (
     <HelmetProvider>
-      <Container className="About-header text-white" style={{height:"200rem"}}>
+<Container className="About-header text-white skills-container d-flex flex-column min-height-vh-80">
         <Helmet>
           <meta charSet="utf-8" />
           <title> About | {meta.title}</title>
