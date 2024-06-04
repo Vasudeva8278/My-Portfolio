@@ -3,6 +3,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "./content_option";
 import "../css/Projects.css";
+import { Socialicons } from "./Socialicons";
 
 export const Projects = () => {
   return (
@@ -30,6 +31,9 @@ export const Projects = () => {
               <div className="content">
                 <p>{data.description}</p>
                 <a href={data.link}>view project</a>
+              </div>
+              <div>
+                <Socialicons />
               </div>
             </div>
           ))}

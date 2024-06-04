@@ -1,3 +1,12 @@
+.About-header+ {
+  height: auto; /* Let the form adapt to its content */
+  margin-bottom: 0; /* Remove or adjust margin-bottom as needed */
+}
+.About-header {
+  height: auto;
+}
+
+
 .contact__form .form-control {
     padding: 1.375rem .75rem;
     line-height: 1.5;
@@ -87,8 +96,7 @@ button.btn.ac_btn:hover {
   }
 
 
-  
-  
+
 
  
 

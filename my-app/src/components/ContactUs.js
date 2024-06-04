@@ -6,6 +6,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import { contactConfig } from "./content_option";
 import { meta } from './content_option';
 import { Alert } from "react-bootstrap";
+import {
+  FaGithub,
+ 
+  FaFacebookF,
+  FaLinkedin,
+  FaYoutube,
+  FaTwitch,
+} from "react-icons/fa";
 
 export const ContactUs = () => {
   const [email, setEmail] = useState('');
@@ -38,7 +46,7 @@ export const ContactUs = () => {
   return (
     <HelmetProvider>
    
-      <Container className ="About-header text-white" style={{ backgroundColor: "#201414",height:"65rem"}}>
+      <Container fluid className ="About-header text-white">
         <Helmet>
           <meta charSet="utf-8" />
           <title>{meta.title} | Contact</title>
@@ -128,7 +136,12 @@ export const ContactUs = () => {
           </Col>
         </Row>
       </Container>
-      <div></div>
+      <br></br>
+      <div>
+       
+      </div>
+
+   
     </HelmetProvider>
   );
 };

@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 import { introdata, meta } from "./content_option";
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Socialicons } from "./Socialicons";
 
 export const Home = () => {
   return (
@@ -48,6 +49,9 @@ export const Home = () => {
               
                     </div>
                   </Link>
+                </div>
+                <div className="text-white">
+                  <Socialicons />
                 </div>
               </div>
             </div>

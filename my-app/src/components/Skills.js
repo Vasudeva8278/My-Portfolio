@@ -10,6 +10,7 @@ import {
   skills,
   services,
 } from "./content_option";
+import { Socialicons } from './Socialicons';
 
 
 export const Skills = () => {
@@ -96,6 +97,9 @@ export const Skills = () => {
             })}
           </Col>
         </Row>
+        <div>
+          < Socialicons />
+        </div>
       </Container>
     </HelmetProvider>
   );
