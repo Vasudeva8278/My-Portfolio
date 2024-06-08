@@ -6,8 +6,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { contactConfig } from "./content_option";
 import { meta } from './content_option';
 import { Alert } from "react-bootstrap";
-import { Socialicons } from "./Socialicons";
-
 
 
 export const ContactUs = () => {
@@ -130,11 +128,23 @@ export const ContactUs = () => {
               {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
             </form>
           </Col>
+          
         </Row>
+       <Row style={{marginTop:"-5.5rem",marginLeft:"1rem"}}>
+       
+     
+          
+         
+        
+      
+   
+        
+      
+       </Row>
       </Container>
     
       <br></br>
-     
+   
 
    
     </HelmetProvider>

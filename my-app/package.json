@@ -17,6 +17,7 @@
     "gsap": "^3.12.5",
     "jotai": "^2.8.1",
     "leva": "^0.9.35",
+    "mdb-react-ui-kit": "^8.0.0",
     "netlify": "^13.1.17",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.2",

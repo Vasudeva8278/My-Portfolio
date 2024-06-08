@@ -142,8 +142,8 @@ const contactConfig = {
 
 const socialprofils = {
     github: "https://github.com/Vasudeva8278?tab=repositories",
-    facebook: "https://www.facebook.com/vasu.samart",
-    linkedin: "https://www.linkedin.com/in/vasudeva-rao-sanchapu-a21107198/",
+    facebook: "https://www.facebook.com/vasu.samart/",
+    linkedin: "www.linkedin.com/in/vasudeva-rao-sanchapu-a21107198",
 
 };
 export {
