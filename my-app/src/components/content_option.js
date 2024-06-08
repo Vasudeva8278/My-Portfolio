@@ -39,7 +39,7 @@ const skills = [{
         value: 90,
     },
     {
-        name: "Djano",
+        name: "Django",
         value: 90,
     },
     {
@@ -100,22 +100,22 @@ const services = [
 const dataportfolio = [{
         
         img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
+        description: "My Web site",
         link: "https://6664171334f103aa20d6924f--sprightly-choux-94ec78.netlify.app/",
     },
     {
         img: "https://picsum.photos/400/800/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
+        description: "Moter Bike Lunch",
         link: "https://github.com/Vasudeva8278/bikeeee",
     },
     {
         img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
+        description: "Ap Polling Survey",
         link: "https://github.com/Vasudeva8278/project_survy",
     },
     {
         img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
+        description: "My Company Website",
         link: "https://github.com/Vasudeva8278/Lomma_website",
     },
     {
@@ -128,7 +128,7 @@ const dataportfolio = [{
    
     {
         img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
+        description: "Foodlie App",
         link: "https://github.com/Vasudeva8278/New",
     },
 ];

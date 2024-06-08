@@ -70,7 +70,7 @@ export const Skills = () => {
                   <div className="progress">
                     <div
                       className="progress-bar"
-                      style={{
+                      style={{backgroundColor:"white",
                         width:  `${data.value}%`,
                       }}
                     >
