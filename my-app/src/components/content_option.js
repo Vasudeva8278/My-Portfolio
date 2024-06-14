@@ -101,7 +101,7 @@ const dataportfolio = [{
         
         img: "https://picsum.photos/400/?grayscale",
         description: "My Web site",
-        link: "https://6664171334f103aa20d6924f--sprightly-choux-94ec78.netlify.app/",
+        link: "https://darling-trifle-83ad2a.netlify.app/",
     },
     {
         img: "https://picsum.photos/400/800/?grayscale",

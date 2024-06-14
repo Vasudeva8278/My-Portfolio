@@ -4,7 +4,7 @@ import { Home } from './components/Home';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { ContactUs } from './components/ContactUs';
-
+import AnimatedCursor from "react-animated-cursor"
 import './App.css';
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
   return (
     <>
     <div style={{ backgroundColor: "#201414",height:"auto" }}>
+    <AnimatedCursor />
   
     <Router>
       <Navbar />
