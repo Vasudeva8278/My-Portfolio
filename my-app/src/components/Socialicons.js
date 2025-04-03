@@ -1,62 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaHome, FaCode, FaProjectDiagram, FaEnvelope, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "../css/Socialicons.css";
-import {
-  FaGithub,
- 
-  FaFacebookF,
-  FaLinkedin,
-  FaYoutube,
-  FaTwitch,
-} from "react-icons/fa";
-import { socialprofils } from "./content_option";
 
-export const Socialicons = (params) => {
+export const Socialicons = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="stick_follow_icon">
-      <ul>
-        {socialprofils.twitter && (
-          <li>
-           
-          </li>
-        )}
-        {socialprofils.github && (
-          <li>
-            <a href={socialprofils.github}>
-              <FaGithub style={{ backgroundColor:"white" }}  />
-            </a>
-          </li>
-        )}
-        {socialprofils.facebook && (
-          <li>
-            <a href={socialprofils.facebook}>
-              <FaFacebookF style={{ backgroundColor:"white" }} />
-            </a>
-          </li>
-        )}
-        {socialprofils.linkedin && (
-          <li>
-            <a href={socialprofils.linkedin}>
-              <FaLinkedin style={{ backgroundColor:"white" }} />
-            </a>
-          </li>
-        )}
-        {socialprofils.youtube && (
-          <li>
-            <a href={socialprofils.youtube}>
-              <FaYoutube />
-            </a>
-          </li>
-        )}
-        {socialprofils.twitch && (
-          <li>
-            <a href={socialprofils.twitch}>
-              <FaTwitch />
-            </a>
-          </li>
-        )}
+    <div className="circular-menu">
+      {/* Floating Menu Button */}
+      <button className={`menu-button ${open ? "open" : ""}`} onClick={() => setOpen(!open)}>
+        <FaBars />
+      </button>
+
+      {/* Circular Links */}
+      <ul className={`menu-items ${open ? "show" : ""}`}>
+        <li>
+          <Link to="/">
+            <FaHome />
+          </Link>
+        </li>
+        <li>
+          <Link to="/skills">
+            <FaCode />
+          </Link>
+        </li>
+        <li>
+          <Link to="/projects">
+            <FaProjectDiagram />
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact">
+            <FaEnvelope />
+          </Link>
+        </li>
       </ul>
-      <p>Follow Me</p>
-     
     </div>
   );
 };

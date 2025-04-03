@@ -13,11 +13,11 @@ const App = () => {
 
   return (
     <>
-    <div style={{ backgroundColor: "#201414",height:"auto" }}>
+    <div style={{height:"auto" }}>
     <AnimatedCursor />
   
     <Router>
-      <Navbar />
+   
       <br></br>
       <Routes>
       <Route path="/" element={<Home />} />

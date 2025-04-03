@@ -11,7 +11,6 @@
     padding: 1.375rem .75rem;
     line-height: 1.5;
     color: var(--text-color);
-    background-color: var(--bg-color);
     border-radius: 0 !important;
     border: 1px solid var(--secondary-color);
     width: 20rem;
@@ -52,7 +51,7 @@ button.btn.ac_btn:hover {
     right: 0;
     height: 30px;
     z-index: 999999999;
-    background: var(--text-color);
+   
     transform: translateX(100%);
     animation: shift-rightwards 1s ease-in-out infinite;
     animation-delay: .3s;
@@ -100,4 +99,111 @@ button.btn.ac_btn:hover {
 
  
 
+  .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; /* Places the video behind everything */
+  }
   
+  /* Remove the dark background */
+body, .About-header, .sec_sp {
+  background-color: transparent !important;
+}
+
+/* Improve text contrast if needed */
+.contact__form .form-control, .contact__form textarea {
+  background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+  color: white; /* Change text color */
+  border: 1px solid white; /* Improve visibility */
+}
+
+/* Ensure buttons remain visible */
+.btn.ac_btn {
+  background-color: #fff !important;
+  color: black !important;
+  border: 1px solid white;
+}
+
+/* Background video stays visible */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -100; /* Keeps it behind content */
+}
+
+
+/* 🔵 Social Icons - Proper Alignment */
+.stick_follow_icon {
+  position: fixed;
+  left: 10px; /* Adjust positioning */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.stick_follow_icon ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stick_follow_icon ul li {
+  margin-bottom: 10px;
+}
+
+.stick_follow_icon ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.stick_follow_icon ul li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 🟢 Transparent Input Fields */
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+  color: white; /* Keep text visible */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft white border */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* Lighter text for placeholder */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🔴 Fix Form Layout */
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}

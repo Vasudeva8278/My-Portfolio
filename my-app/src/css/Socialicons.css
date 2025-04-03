@@ -85,3 +85,88 @@
         margin-right: 10px;
     }
 }
+
+/* Circular Menu Container */
+.circular-menu {
+    position: fixed;
+    bottom: 50px;
+    left: 150px;
+    z-index: 1000;
+  }
+  
+  /* Floating Menu Button */
+  .menu-button {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  }
+  
+  .menu-button:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slight transparency on hover */
+  }
+  
+  .menu-button.open {
+    transform: rotate(45deg);
+  }
+  
+  /* Hidden menu items (until activated) */
+  .menu-items {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu-items.show {
+    transform: scale(1);
+  }
+  
+  /* Arrange items in a circular pattern */
+  .menu-items li {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Circular placement */
+  .menu-items.show li:nth-child(1) { transform: translate(-60px, -10px); }
+  .menu-items.show li:nth-child(2) { transform: translate(-90px, -50px); }
+  .menu-items.show li:nth-child(3) { transform: translate(-60px, -90px); }
+  .menu-items.show li:nth-child(4) { transform: translate(-10px, -120px); }
+  
+  /* Transparent Icons */
+  .menu-items li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+  }
+  
+  .menu-items li a svg {
+    color: white; /* White icon color */
+    font-size: 20px;
+  }
+  
+  .menu-items li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+  

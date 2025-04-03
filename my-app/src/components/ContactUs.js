@@ -2,151 +2,129 @@ import React, { useState } from "react";
 import "../css/Contact.css";
 import emailjs from "emailjs-com";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { Container, Row, Col } from "react-bootstrap";
-import { contactConfig } from "./content_option";
-import { meta } from './content_option';
-import { Alert } from "react-bootstrap";
-
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
+import { contactConfig, meta } from "./content_option";
+import { Socialicons } from "./Socialicons";
 
 export const ContactUs = () => {
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [formData, setFormData] = useState({ email: "", subject: "", message: "" });
+  const [status, setStatus] = useState({ loading: false, success: "", error: "" });
+
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setLoading(true);
+    setStatus({ loading: true, success: "", error: "" });
 
-    emailjs.sendForm('service_m9nd8qd', 'template_qs7jvgn', e.target, '9ZoS0emdIOVmjNYXs')
-      .then((result) => {
-        console.log(result.text);
-        setSuccessMessage('Email sent successfully!');
-        setErrorMessage('');
-      })
-      .catch((error) => {
-        console.error(error.text);
-        setErrorMessage('Failed to send email.');
-        setSuccessMessage('');
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    emailjs.sendForm("service_m9nd8qd", "template_qs7jvgn", e.target, "9ZoS0emdIOVmjNYXs")
+      .then(() => setStatus({ loading: false, success: "Email sent successfully!", error: "" }))
+      .catch(() => setStatus({ loading: false, success: "", error: "Failed to send email." }));
   };
 
   return (
     <HelmetProvider>
+      <div className="mt-3">
+        <Socialicons />
+      </div>
 
-   
-      <Container fluid className ="About-header text-white">
+      {/* 🔴 Responsive Background Video */}
+      <div className="video-container">
+        <video autoPlay loop muted className="background-video">
+          <source src={require("../Assets/1851190-uhd_3840_2160_25fps.mp4")} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <Container fluid className="contact-container text-white">
         <Helmet>
           <meta charSet="utf-8" />
           <title>{meta.title} | Contact</title>
           <meta name="description" content={meta.description} />
         </Helmet>
+
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
             <h1 className="display-4 mb-4">Contact Me</h1>
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
+
         <Row className="sec_sp">
-          <Col lg="12"></Col>
-          <Col lg="5" className="mb-5">
-            <h3 className="color_sec py-4">Get in touch</h3>
-            <address>
+          {/* Contact Info */}
+          <Col lg={5} className="mb-5 contact-info">
+            <h3 className="color_sec py-4">Get in Touch</h3>
+            <p>
               <strong>Email:</strong>{" "}
-              <a href={`mailto:vasudevsanchapu@gmail.com`}>vasudevsanchapu@gmail.com</a>
-              <br />
-              <br />
-              {contactConfig.hasOwnProperty("YOUR_FONE") && (
-                <p>
-                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
-                </p>
-              )}
-            </address>
+              <a href="mailto:vasudevsanchapu@gmail.com">vasudevsanchapu@gmail.com</a>
+            </p>
+            {contactConfig.YOUR_FONE && (
+              <p>
+                <strong>Phone:</strong> {contactConfig.YOUR_FONE}
+              </p>
+            )}
             <p>{contactConfig.description}</p>
           </Col>
-          <Col lg="7" className="d-flex align-items-center">
-            <form onSubmit={sendEmail} className="contact__form w-100">
+
+          {/* Contact Form */}
+          <Col lg={7} className="d-flex align-items-center">
+          <Form onSubmit={sendEmail} className="contact-form w-100">
               <Row>
-                <Col lg="6" className="form-group">
-                  <label>
-                    Email:
-                    <input
-                      className="form-control"
+                <Col lg={6}>
+                  <Form.Group>
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control
                       type="email"
                       name="email"
-                      placeholder="Email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter your email"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
                     />
-                  </label>
+                  </Form.Group>
                 </Col>
-                <Col lg="6" className="form-group">
-                  <label>
-                    Name:
-                    <input
-                      className="form-control rounded-0 text-white"
-                      id="email"
+
+                <Col lg={6}>
+                  <Form.Group>
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control
                       type="text"
                       name="subject"
-                      placeholder="Name"
-                      value={subject}
-                      onChange={(e) => setSubject(e.target.value)}
+                      placeholder="Enter your name"
+                      value={formData.subject}
+                      onChange={handleChange}
                       required
-
                     />
-                  </label>
+                  </Form.Group>
                 </Col>
               </Row>
-              <label>
-                Message:
-                <textarea
-                  className="form-control rounded-0"
-                  id="message"
+
+              <Form.Group className="mt-3">
+                <Form.Label>Message</Form.Label>
+                <Form.Control
+                  as="textarea"
                   name="message"
-                  placeholder="Message"
-                  rows="5"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  rows={5}
+                  placeholder="Type your message here..."
+                  value={formData.message}
+                  onChange={handleChange}
                   required
                 />
-              </label>
-              <br />
-              <Row>
-                <Col lg="12" className="form-group">
-                <button className="btn ac_btn text-white" type="submit" disabled={loading}>
-                    {loading ? "Sending..." : "Send"}
-                  </button>
-                </Col>
-              </Row>
-              {successMessage && <Alert variant="success">{successMessage}</Alert>}
-              {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
-            </form>
-          </Col>
-          
-        </Row>
-       <Row style={{marginTop:"-5.5rem",marginLeft:"1rem"}}>
-       
-     
-          
-         
-        
-      
-   
-        
-      
-       </Row>
-      </Container>
-    
-      <br></br>
-   
+              </Form.Group>
 
-   
+              <Button
+                type="submit"
+                className="btn ac_btn text-white mt-3"
+                disabled={status.loading}
+              >
+                {status.loading ? "Sending..." : "Send"}
+              </Button>
+
+              {status.success && <Alert variant="success" className="mt-3">{status.success}</Alert>}
+              {status.error && <Alert variant="danger" className="mt-3">{status.error}</Alert>}
+            </Form>
+          </Col>
+        </Row>
+      </Container>
     </HelmetProvider>
   );
 };

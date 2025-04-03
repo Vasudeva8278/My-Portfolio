@@ -12,8 +12,17 @@ export const Navbar = () => {
 
   return (
     <>
-    <div style={{backgroundColor: "#000003"}}>
-    <nav className={`navbar navbar-expand-lg navbar-dark  ${isOpen ? 'show' : ''}`} style={{backgroundColor: "#000003"}}>
+    <div style={{color:"white"}}>
+    <nav
+          className="navbar navbar-expand-lg navbar-light"
+          style={{
+            backgroundColor: "transparent",
+            position: "absolute",
+            width: "100%",
+            zIndex: 1000,
+          }}
+        >
+
       {/* Your name or logo */}
       <NavLink className="navbar-brand" to="/" exact>Vasu Dev</NavLink>
 
