@@ -10,7 +10,7 @@ import { Socialicons } from "./Socialicons";
 export const Home = () => {
   return (
     <HelmetProvider>
-      <section id="home" className="home text-white" style={{ backgroundColor: "#201414",marginTop:"60px" }}> {/* Set background color */}
+      <section id="home" className="home text-white" style={{ backgroundColor: "#000003",marginTop:"30px" }}> {/* Set background color */}
         <Helmet>
           <meta charSet="utf-8" />
           <title>{meta.title}</title>

@@ -233,11 +233,11 @@ section {
     filter: saturate(0.5);
 }
 
-
-  .h_bg-image {
-    background-image: url("../Assets/three.jpg");
+.h_bg-image {
+    background-image: url("../Assets/new-image.gif"); /* Replace with your new file name */
     position: relative;
-  }
+}
+
 
 
 
